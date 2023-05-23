@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <style>
+        body{
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("yu-kato-AqCBCOcqSZQ-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    }
+    </style>
+    <div class="py-1 flex items-center justify-center">
+    <h1 class="text-4xl text-white font-bold p-2 border-2">
+        Welcome to Okinawa
+    </h1>
+    </div>
+        <div class="py-1 flex items-center justify-center">
+        <div id = "map" class ="flex items-center justify-center h-96 w-5/12 border-4 border-green-900"></div>
+        <script>
+            // Creating map options
+            var mapOptions = {
+                center: [26.49638986908721, 127.93916029314272],
+                zoom: 9
+            }
+            // Creating a map object
+            var map = new L.map('map', mapOptions);
+            // Creating a Layer object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            
+            const basicFlowerIcon = L.icon({
+                iconUrl: 'hibiscus.png',
+                iconSize: [40, 40],
+            });
+            // Adding layer to the map
+            map.addLayer(layer);
+            const marker1 = L.marker([26.314668, 127.757098], {icon: basicFlowerIcon})
+            .bindPopup('2: American Village')
+            .addTo(map);
+            const marker2 = L.marker([26.193691,127.657963], {icon: basicFlowerIcon})
+            .bindPopup('1: Naha International Airport')
+            .addTo(map);
+            const marker3 = L.marker([26.6914,127.8835], {icon: basicFlowerIcon})
+            .bindPopup('3: Okinawa Churaumi Aquarium')
+            .addTo(map);
+            const marker4 = L.marker([26.6159998,127.9695476], {icon: basicFlowerIcon})
+            .bindPopup('4: Nago Pineapple Park')
+            .addTo(map);
+            const marker5 = L.marker([26.4462842,127.7713649], {icon: basicFlowerIcon})
+            .bindPopup('5: Cape Maeda')
+            .addTo(map);
+            const marker6 = L.marker([26.2174337,127.7191026], {icon: basicFlowerIcon})
+            .bindPopup('6: Shurijo Castle Park')
+            .addTo(map);
+            const marker7 = L.marker([26.0967608,127.7216219], {icon: basicFlowerIcon})
+            .bindPopup('7: Peace Memorial Park')
+            .addTo(map);
+            const marker8 = L.marker([26.141132077430477, 127.74932711164638], {icon: basicFlowerIcon})
+            .bindPopup('8: Gyokusendo Cave')
+            .addTo(map);
+            const marker9 = L.marker([26.331786634305505, 127.88062665767073], {icon: basicFlowerIcon})
+            .bindPopup('9: Katsuren Castle Ruins')
+            .addTo(map);
+            </script>
+    </div>
+    <div class="py-1 flex items-center justify-center text-3xl text-white font-bold underline">
+        <h2>Points of Interest</h2>
+    </div>
+    <div class="py-1 flex items-center justify-center">
+        <div class="bg-transparent p-4 w-[70vw] flex flex-wrap items-center justify-center gap-3 text-white text-center">
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://content.fun-japan.jp/renewal-prod/cms/articles/content/4jpg_2021-03-26-09-32-12.jpg">
+            <h2 class="py-1 px-1">1: Naha International Airport</h2>
+            <p class="text-xs py-1 px-1">
+                Naha Airport (那覇空港, Naha Kūkō) is a second class airport located 4 km (2.5 mi) west of the city hall in Naha, Okinawa. 
+                It is Japan's seventh busiest airport and the primary air terminal for passengers and cargo traveling to and from Okinawa Prefecture, Japan.</p>
+                <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+                onclick="window.open('https://www.naha-airport.co.jp/en/','_blank')">
+                    Go Book Your Tickets!
+                  </button>
+            </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://okinawatravelinfo.com/wp-content/uploads/2015/02/201502americanvillage_main1.jpg">
+            <h2 class="py-1 px-1">2: American Village</h2>
+            <p class="text-xs py-1 px-1">If you're in the mood for some Americana, head to Mihama American Village, a large entertainment and shopping complex in Chatan.
+                As you wander through the mall, located under an hour from Naha, you'll experience a classic taste of America mixed with local Okinawan flavor.</p>
+                <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+                onclick="window.open('https://www.okinawa-americanvillage.com/en/shopcat/en-shopping/','_blank')">
+                    Shopping Directory
+                  </button>
+            </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://www.justonecookbook.com/wp-content/uploads/2018/05/Churaumi-Aquarium-722-1010824.jpg">
+            <h2 class="py-1 px-1">3: Churaumi Aquarium</h2>
+            <p class="py-1 px-1 text-xs">
+                This aquarium is one of the world's largest and features sharks, coral, fish, manta rays & more.
+            </p>
+            <p class="py-1 px-1 text-xs">It is an absolute must see while visiting the island!</p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+            onclick="window.open('https://churaumi.okinawa/en/','_blank')">
+            Churaumi Aquarium Information
+              </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/f0/db/55/caption.jpg?w=1200&h=-1&s=1">
+            <h2 class="py-1 px-1">4: Nago Pineapple Park</h2>
+            <p class="py-1 px-1 text-xs">They have everything from pineapple wine to cookies and even cakes!  </p>
+            <p class="py-1 px-1 text-xs">A small, enjoyable theme park about pineapples. </p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+                onclick="window.open('https://www.nagopine.com/access.html','_blank')">
+                    Buy Your Tickets Here!
+                  </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://static.gltjp.com/glt/prd/data/directory/12000/11553/20210415_163144_0ed8ac8f_w1920.jpg">
+            <h2 class="py-1 px-1">5: Cape Maeda</h2>
+            <p class="py-1 px-1 text-xs">
+                Cape Maeda is known for its coral plateau located on the west coast of central Okinawa.
+                Huge rocks lie among the tip of cape formed by the raised coral reef, and right underneath you will be able to see one of Okinawa’s clear emerald green ocean with its beautiful coral reef.
+            </p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+            onclick="window.open('http://www.maedamisaki.jp/en/','_blank')">
+                Cape Maeda Information
+              </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="Naha_Okinawa_Japan_Shuri-Castle-01.jpg">
+            <h2 class="py-1 px-1">6: Shurijo Castle Park</h2>
+            <p class="py-1 px-1 text-xs">
+                Shuri Castle was a Ryukyuan gusuku castle in Shuri, Okinawa Prefecture, Japan. 
+                Between 1429 and 1879, it was the palace of the Ryukyu Kingdom, before becoming largely neglected. 
+                In 1945, during the Battle of Okinawa, it was almost completely destroyed. 
+                After the war, the castle was re-purposed as a university campus.</p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+            onclick="window.open('https://oki-park.jp/shurijo/en/','_blank')">
+            Shurijo Castle Park Information
+              </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Okinawa_prefectural_Peace_memorial_Museum-2007-06-27_4.jpg">
+            <h2 class="py-1 px-1">7: Peace Memorial Park</h2>
+            <p class="py-1 px-1 text-xs">
+                Okinawa Senseki Quasi-National Park is a Quasi-National Park around the battlefields of south Okinawa, Japan. 
+                It was established as a Prefectural Park in 1965 and redesignated with the return of Okinawa to Japanese administration in 1972.</p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+            onclick="window.open('http://www.peace-museum.okinawa.jp/english/','_blank')">
+            Peace Memorial Park Information
+              </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://www.gyokusendo.co.jp/okinawaworld/en/slide/765-gyokusendo.jpg">
+            <h2 class="py-1 px-1">8: Gyokusendo Cave</h2>
+            <p class="py-1 px-1 text-xs">
+                Okinawa has over 600 limestone caverns, and among them, Okinawa World's Gyokusendo is the largest. The cave stretches for over 5,000 meters, and contains more than one million stalactites.
+            </p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+                onclick="window.open('https://www.gyokusendo.co.jp/okinawaworld/en/okinawacave/','_blank')">
+                Gyokusendo Cave Information
+              </button>
+        </div>
+        <div class="h-96 w-64 bg-lime-950 border-2 border-green-900 rounded bg-opacity-60">
+            <img class="max-w-full opacity-70" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Katsuren_Castle_ruins.jpg/1280px-Katsuren_Castle_ruins.jpg">
+            <h2 class="py-1 px-1">9: Katsuren Castle Ruins</h2>
+            <p class="py-1 px-1 text-xs">
+                Katsuren Castle (勝連城, Katsuren jō) is a Ryukyuan gusuku in Uruma, Okinawa. 
+                In 2000, Katsuren Castle was designated as a World Heritage Site, as a part of the Gusuku Sites and Related Properties of the Kingdom of Ryukyu. </p>
+            <button class="bg-transparent hover:bg-lime-900 text-xs text-lime-800 font-semibold hover:text-white h-5 w-51 border border-lime-900 hover:border-transparent rounded"
+                onclick="window.open('https://www.katsuren-jo.jp/english-1/','_blank')">
+                Katsuren Castle Ruins Information
+              </button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
