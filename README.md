@@ -35,12 +35,4 @@ After completing the installation steps, you can run the project locally:
     Start a local development server: npm run dev
     Open your web browser and visit http://localhost:3000 to view the website.
 
-Contributing
 
-Contributions to the project are welcome. If you want to contribute, please follow these steps:
-
-    Fork the repository.
-    Create a new branch: git checkout -b feature/your-feature-name
-    Make your changes and commit them: git commit -m 'Add some feature'
-    Push to the branch: git push origin feature/your-feature-name
-    Submit a pull request.
