@@ -1,5 +1,7 @@
 # HackathonProj
 This project is a website that provides a tour of Okinawa, utilizing the Leaflet and Tailwind libraries. It is built for a hackathon and aims to showcase the beauty and attractions of Okinawa.
+![Screenshot from 2023-08-02 09-03-56](https://github.com/Autumn-S/HackathonProj/assets/130795003/7556022c-3ee5-4a3b-9196-aacdeeaf36a8)
+
 
 Features
 
